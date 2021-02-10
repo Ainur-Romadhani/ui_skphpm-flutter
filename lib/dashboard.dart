@@ -3,6 +3,7 @@ import 'package:skphp_mobile/drawer/drawer.dart';
 import 'package:skphp_mobile/header.dart';
 import 'package:skphp_mobile/footer.dart';
 import 'package:skphp_mobile/qrCode.dart';
+import 'package:skphp_mobile/transaksi/sulan1.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -65,7 +66,12 @@ class _DashboardState extends State<Dashboard> {
                       children: <Widget>[
                         Center(
                           child: FlatButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  new MaterialPageRoute(
+                                      builder: (context) => Sulan1()));
+                            },
                             child: Image(
                               image: AssetImage('images/ic_input.webp'),
                               width: 240,
